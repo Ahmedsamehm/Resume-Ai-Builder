@@ -48,8 +48,10 @@ This increases your ATS score and gives your resume a better chance of passing a
 After completing your resume, you can download a professional PDF version directly from the site.Example:
 
 
-![image](https://github.com/user-attachments/assets/78f3427c-eb04-4b77-ab42-236287a44d34)
-![image](https://github.com/user-attachments/assets/2fa2d622-56f8-4bda-8891-ae49212b9ee3)
+![image](https://github.com/user-attachments/assets/9645108a-e649-4342-88c3-a5d2d4ec7282)
+
+![image](https://github.com/user-attachments/assets/4f7297fb-dac7-443a-92c4-10385aced49a)
+
 
 
 
