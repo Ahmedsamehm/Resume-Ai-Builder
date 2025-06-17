@@ -38,7 +38,7 @@ const LoginWithGoogle = async () => {
     provider: "google",
 
     options: {
-      redirectTo: "http://localhost:5173/",
+      redirectTo: "https://ahmedsamehm.github.io/Resume-Ai-Builder/",
     },
   });
 
