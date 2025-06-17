@@ -11,7 +11,9 @@ function PersonalInformationBody() {
   // Get API config for personal info
   const { fetchingPersonalInfoObj } = ConfigApiContext();
   // Fetch personal information data
-  const { data: PersonalInformation, isPending } = useGetData(fetchingPersonalInfoObj);
+  const { data: PersonalInformation, isPending } = useGetData(
+    fetchingPersonalInfoObj
+  );
   // Extract personal info from resume data
   const { personalInfo } = resumeData;
 
