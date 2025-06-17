@@ -33,7 +33,7 @@ function EducationBody() {
             "2020"}
         </span>
       </div>
-      <span>{education?.location || Education?.[0].location}</span>
+      <span>{education?.location || Education?.[0]?.location}</span>
     </section>
   );
 }
