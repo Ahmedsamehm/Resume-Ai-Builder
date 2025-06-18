@@ -36,7 +36,6 @@ const apiLogin = async ({ email, password }) => {
 const LoginWithGoogle = async () => {
   const { error } = await supabase.auth.signInWithOAuth({
     provider: "google",
-
     options: {
       redirectTo: "https://ahmedsamehm.github.io/Resume-Ai-Builder/",
     },
@@ -46,6 +45,7 @@ const LoginWithGoogle = async () => {
     console.error("Error logging in:", error.message);
   }
 };
+
 const Logout = async () => {
   const { error, data } = await supabase.auth.signOut();
   if (error) throw error;

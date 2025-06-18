@@ -66,7 +66,7 @@ function ResumeLayOut() {
     <>
       <DotsStylingBody />
       <div className="grid grid-cols-2 gap-3">
-        <div className="col-span-2 lg:col-span-1 min-h-[calc(100vh-120px)]">
+        <div className="col-span-2 lg:col-span-1 ">
           <div className="flex justify-between gap-2  ">
             <Button
               disabled={steps === 0}
@@ -87,7 +87,7 @@ function ResumeLayOut() {
           {renderStep()}
         </div>
 
-        <div className="col-span-2 lg:col-span-1  min-h-[calc(100vh-120px)]">
+        <div className="col-span-2 lg:col-span-1  ">
           <PreviewSection />
         </div>
       </div>

@@ -10,8 +10,6 @@ function EducationBody() {
   const { data: Education, isPending } = useGetData(fetchingEducationObj);
   const { education } = resumeData;
 
-  console.log(Education);
-
   useEffect(() => {
     updateSection("education", Education);
   }, [Education]);

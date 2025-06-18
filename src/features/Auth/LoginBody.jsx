@@ -39,7 +39,15 @@ function LoginBody() {
   return (
     <>
       <div>
-        <Form isLoading={isPending} inputs={inputs} onSubmit={onSubmit} title={"Login"} showSaveBtn={true} Rest={false} className="w-full md:w-lg" />
+        <Form
+          isLoading={isPending}
+          inputs={inputs}
+          onSubmit={onSubmit}
+          title={"Login"}
+          showSaveBtn={true}
+          Rest={false}
+          className="w-full md:w-lg"
+        />
         <Button onClick={LoginWithGoogle} className={`w-full`}>
           Google
         </Button>

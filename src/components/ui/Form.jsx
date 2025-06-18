@@ -83,9 +83,9 @@ const Form = (Param) => {
 
   return (
     <div className={className}>
-      <form onSubmit={handleSubmit(onSubmit)} className="w-full">
+      <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-3">
         <div className="flex justify-between">
-          <h1 className="">{title}</h1>
+          <h1 className="text-2xl font-bold">{title}</h1>
         </div>
         <ul className="space-y-3">
           {inputs?.map((input, index) => (
@@ -97,39 +97,48 @@ const Form = (Param) => {
             />
           ))}
         </ul>
-        <div className="flex justify-end mt-3 gap-2 flex-col xl:flex-row mb-3 ">
-          {showSaveBtn && isEditing ? (
-            <Button
-              className="btn btn-primary"
-              type="submit"
-              disabled={isLoading}
-            >
-              {isLoading ? (
-                <LoaderCircle className="animate-spin" />
+        <div className="flex  mt-3 gap-3  flex-col lg:flex-row xl:flex-row mb-3 w-full ">
+          <ul className="w-full space-y-3">
+            <li>
+              {showSaveBtn && isEditing ? (
+                <Button
+                  className="btn btn-primary w-full"
+                  type="submit"
+                  disabled={isLoading}
+                >
+                  {isLoading ? (
+                    <LoaderCircle className="animate-spin" />
+                  ) : (
+                    " update"
+                  )}
+                </Button>
               ) : (
-                " update"
+                <Button
+                  className="btn btn-primary  w-full  "
+                  type="submit"
+                  disabled={isLoading}
+                >
+                  {isLoading ? (
+                    <LoaderCircle className="animate-spin" />
+                  ) : (
+                    "Save"
+                  )}
+                </Button>
               )}
-            </Button>
-          ) : (
-            <Button
-              className="btn btn-primary"
-              type="submit"
-              disabled={isLoading}
-            >
-              {isLoading ? <LoaderCircle className="animate-spin" /> : "Save"}
-            </Button>
-          )}
-
-          {ShowAiButton && (
-            <ImproveWithAI
-              inputValue={chooseValue()}
-              contentType={contentType}
-              filedName={contentType}
-              onUpdateValues={(response) => {
-                setValue(contentType, response);
-              }}
-            ></ImproveWithAI>
-          )}
+            </li>
+            <li>
+              {ShowAiButton && (
+                <ImproveWithAI
+                  inputValue={chooseValue()}
+                  contentType={contentType}
+                  filedName={contentType}
+                  onUpdateValues={(response) => {
+                    setValue(contentType, response);
+                  }}
+                ></ImproveWithAI>
+              )}
+            </li>
+          </ul>
         </div>
       </form>
     </div>

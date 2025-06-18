@@ -60,11 +60,9 @@ function ImproveWithAI({ inputValue, onUpdateValues, contentType, filedName }) {
 
   return (
     <Sheet>
-      <SheetTrigger>
-        <Button asChild type="button" className="p-1">
-          <p className="text-xs md:text-sm text-wrap">
-            Generate {filedName} Based on Job Description ✨
-          </p>
+      <SheetTrigger asChild>
+        <Button type="button" className="p-1 w-full">
+          Generate {filedName} Based on Job Description ✨
         </Button>
       </SheetTrigger>
 

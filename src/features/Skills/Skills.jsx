@@ -17,12 +17,8 @@ import { ConfigApiContext } from "../../context/ConfigApiContext";
 
 function Skills({ onLiveUpdate }) {
   // Config objects
-  const {
-    fetchingSkillsObj,
-    addSkillsObj,
-    updateSkillsObj,
-    deleteSkillsObj,
-  } = ConfigApiContext();
+  const { fetchingSkillsObj, addSkillsObj, updateSkillsObj, deleteSkillsObj } =
+    ConfigApiContext();
 
   const { id } = useParams();
 
@@ -117,15 +113,15 @@ function Skills({ onLiveUpdate }) {
             No skills added yet. Add skills to enhance your resume.
           </p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-1 xl:grid-cols-2 gap-3 max-h-[500px] overflow-y-auto">
             {skillList?.map((skill, index) => (
               <div
-                key={skill.id}
+                key={skill?.id}
                 className={`p-3 rounded-md border flex justify-between items-center ${
                   currentId === skill?.id
                 }`}
               >
-                <span className="font-medium">{skill?.skill}</span>
+                <span className="text-sm ">{skill?.skill}</span>
                 <div className="flex space-x-2">
                   <Button
                     size="sm"
